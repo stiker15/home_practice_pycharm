@@ -3,10 +3,10 @@ from src.masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(info: str) -> str:
     """
-    Маскирует номер карты или счета.
+    Маскирует номер карты или счета
 
-    :param info: Строка, содержащая название карты или счета и их номер.
-    :return: Строка с замаскированным номером.
+    :param info: Строка, содержащая название карты или счета и их номер
+    :return: Строка с замаскированным номером
     """
     if info.startswith("Счет"):
         return f"{info[:5]} {get_mask_account(int(info[6:]))}"
